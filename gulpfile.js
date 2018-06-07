@@ -3,7 +3,7 @@
 const gulp = require('gulp');
 const sass = require('gulp-sass');
 const autoprefixer = require('gulp-autoprefixer');
-const eslint = require('gulp-eslint');
+/* const eslint = require('gulp-eslint'); */
 const concat = require('gulp-concat');
 const babel = require('gulp-babel');
 const sourcemaps = require('gulp-sourcemaps');
@@ -126,6 +126,7 @@ function copySpec() {
     }
 }
 
+/*
 //// LINT
 
 // lint Jasmine spec files
@@ -134,7 +135,6 @@ gulp.task('lint-jasmine-spec', function () {
     // So, it's best to have gulp ignore the directory as well.
     // Also, Be sure to return the stream from the task;
     // Otherwise, the task may end before the stream has finished.
-    //return gulp.src(['**/*.js', '!node_modules/**', '!jasmine/lib/**'])
     return gulp.src(['dev/jasmine/spec/**'])
         // eslint() attaches the lint output to the "eslint" property
         // of the file object so it can be used by other modules.
@@ -146,7 +146,7 @@ gulp.task('lint-jasmine-spec', function () {
         // lint error, return the stream and pipe to failAfterError last.
         .pipe(eslint.failAfterError());
 });
-
+*/
 
 //// DISTRIBUTION
 
