@@ -103,8 +103,9 @@ $(function() {
             })
         });
 
-        // test that first entry stored is valid
+        // test that a single entry exists and is valid
         it('has at least one entry', function() {
+            expect((entry).length).not.toBe(0);
             expect(entry).toBeDefined();
         });
     
